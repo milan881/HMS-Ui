@@ -1,0 +1,234 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Main App Layout */
+.app {
+  display: flex;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dark Mode Styles */
+.app.dark-mode {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+.app.dark-mode .main-content {
+  background: #1a1a1a;
+}
+
+.app.dark-mode .top-navbar {
+  background: #2d2d2d;
+  border-bottom-color: #404040;
+  color: #ffffff;
+}
+
+.app.dark-mode .search-input {
+  background: #404040;
+  border-color: #555;
+  color: #ffffff;
+}
+
+.app.dark-mode .search-input:focus {
+  border-color: #667eea;
+  background: #333;
+}
+
+.app.dark-mode .dashboard {
+  background: #1a1a1a;
+}
+
+.app.dark-mode .dashboard-header h1 {
+  color: #ffffff;
+}
+
+.app.dark-mode .dashboard-header p {
+  color: #b0b0b0;
+}
+
+.app.dark-mode .dashboard-tile {
+  background: #2d2d2d;
+  border-color: #404040;
+  color: #ffffff;
+}
+
+.app.dark-mode .tile-title {
+  color: #ffffff;
+}
+
+.app.dark-mode .tile-description {
+  color: #b0b0b0;
+}
+
+.app.dark-mode .recent-activities,
+.app.dark-mode .quick-stats {
+  background: #2d2d2d;
+  border-color: #404040;
+  color: #ffffff;
+}
+
+.app.dark-mode .recent-activities h3,
+.app.dark-mode .quick-stats h3 {
+  color: #ffffff;
+}
+
+.app.dark-mode .activity-item:hover {
+  background: #404040;
+}
+
+.app.dark-mode .activity-text {
+  color: #ffffff;
+}
+
+.app.dark-mode .activity-time {
+  color: #b0b0b0;
+}
+
+.app.dark-mode .stat-item {
+  background: linear-gradient(135deg, #404040 0%, #333 100%);
+}
+
+.app.dark-mode .stat-label {
+  color: #b0b0b0;
+}
+
+.app.dark-mode .dashboard-footer {
+  background: #2d2d2d;
+  border-color: #404040;
+  color: #b0b0b0;
+}
+
+.app.dark-mode .sidebar-toggle-btn,
+.app.dark-mode .theme-toggle,
+.app.dark-mode .notifications-btn {
+  color: #ffffff;
+}
+
+.app.dark-mode .sidebar-toggle-btn:hover,
+.app.dark-mode .theme-toggle:hover,
+.app.dark-mode .notifications-btn:hover {
+  background: #404040;
+}
+
+.app.dark-mode .user-menu-btn {
+  border-color: #404040;
+  color: #ffffff;
+}
+
+.app.dark-mode .user-menu-btn:hover {
+  background: #404040;
+}
+
+.app.dark-mode .notifications-dropdown {
+  background: #2d2d2d;
+  border-color: #404040;
+  color: #ffffff;
+}
+
+.app.dark-mode .notifications-header {
+  border-color: #404040;
+}
+
+.app.dark-mode .notifications-header h3 {
+  color: #ffffff;
+}
+
+.app.dark-mode .notification-item {
+  border-color: #404040;
+}
+
+.app.dark-mode .notification-item:hover {
+  background: #404040;
+}
+
+.app.dark-mode .notification-message {
+  color: #ffffff;
+}
+
+.app.dark-mode .notification-time {
+  color: #b0b0b0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    flex-direction: column;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus Styles for Accessibility */
+button:focus,
+input:focus,
+a:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.app.dark-mode ::-webkit-scrollbar-track {
+  background: #2d2d2d;
+}
+
+.app.dark-mode ::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+.app.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
